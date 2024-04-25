@@ -1,4 +1,4 @@
-from Solver import connect,input,seggregate
+from Solver import connect,communicate,seggregate
 from flask import Flask,request,jsonify,json
 
 app = Flask(__name__)
@@ -12,8 +12,11 @@ def solver():
         if json_data:
 
             received_dict = json.loads(json_data)
-            input.sent_prompt(received_dict)
-            return jsonify({"message": "Data received successfully"}), 200
+            oplist,correct_value=communicate.sent_prompt(received_dict)
+            answer=seggregate.seggregator(oplist,correct_value)
+            communicate.sendBack(answer)
+
+            return jsonify({"message": answer}), 200
         else:
             return jsonify({"error": "No JSON data received"}), 400
     else:
