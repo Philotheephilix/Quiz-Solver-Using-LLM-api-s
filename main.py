@@ -13,8 +13,8 @@ def solver():
 
             received_dict = json.loads(json_data)
             oplist,prompt=communicate.generate_prompt(received_dict)
-            #correct_value=connect.claude(prompt)
-            correct_value=connect.chatgpt(prompt)
+            correct_value=connect.claude(prompt)
+            #correct_value=connect.chatgpt(prompt)
             answer=seggregate.seggregator(oplist,correct_value)
 
             return jsonify({"message": answer}), 200

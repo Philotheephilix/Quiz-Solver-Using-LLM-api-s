@@ -6,3 +6,6 @@ def seggregator(options,answer):
     for value, present in presence.items():
         if present :
             return value
+
+def trim_response_claude(main_string):
+    return main_string
