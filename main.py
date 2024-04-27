@@ -12,9 +12,10 @@ def solver():
         if json_data:
 
             received_dict = json.loads(json_data)
-            oplist,correct_value=communicate.sent_prompt(received_dict)
+            oplist,prompt=communicate.generate_prompt(received_dict)
+            #correct_value=connect.claude(prompt)
+            correct_value=connect.chatgpt(prompt)
             answer=seggregate.seggregator(oplist,correct_value)
-            communicate.sendBack(answer)
 
             return jsonify({"message": answer}), 200
         else:

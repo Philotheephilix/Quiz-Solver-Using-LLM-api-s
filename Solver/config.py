@@ -1,2 +1,2 @@
-API_KEY="<YOUR API KEY HERE>"
-API_BASE="<API BASE HERE>"
+API_KEY="pk-picRItgpTZAjWHzpezyucAQqMoDxmwApNIIQFRtGcEIbKNar"
+API_BASE="https://api.pawan.krd/v1"

@@ -7,7 +7,7 @@ openai.api_base =API_BASE
 
 #   increase max_tokens to get a long response
 
-def chat(prompt):
+def chatgpt(prompt):
     response = openai.Completion.create(
         engine="pai-001",
         prompt=prompt,
