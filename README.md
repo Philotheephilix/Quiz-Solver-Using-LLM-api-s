@@ -15,8 +15,8 @@ This repository provides a solution for solving quiz questions using LLM models,
 To get started, clone this repository to your local machine:
 
 ``` bash
-git clone https://github.com/your-username/Quiz-Solver-Using-Chat-GPT.git
-cd Quiz-Solver-Using-Chat-GPT
+git clone https://github.com/Philotheephilix/Quiz-Solver-Using-LLM-api-s
+cd Quiz-Solver-Using-LLM-api-s
 ```
 ## Models Supported 
 - OpenAi (Text only)
